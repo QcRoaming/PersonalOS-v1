@@ -7,7 +7,7 @@
 - Canonical repository: `QcRoaming/PersonalOS`
 - Repository subdirectory: `PersonalOS`
 - Main lane: `research.kernel_aware_gemm`
-- State watermark: 2026-07-24T06:04:50Z
+- State watermark: 2026-07-27T07:49:46Z
 - Latest successful registered experiment: `thesis.chapter6_contract_space_validation`
 - Experiment completed at: `2026-07-24T06:03:58Z`
 
@@ -15,7 +15,7 @@
 
 | Lane | Last activity | Checkpoint | Doing | Next |
 |---|---|---|---|---|
-| `research.kernel_aware_gemm` | 2026-07-24T06:04:50Z | 完成规范化 C 候选池离线 BaCO replay并冻结最终 E2 性能口径 | 按最终规范化 D90/time-to-90、部分复用和 LCB95 break-even 口径整理第四至六章 | 在论文正文中并列报告最终 D90=0.1875、time-to-90=8.0 与规范化前消融 0.1964/11.5 |
+| `research.kernel_aware_gemm` | 2026-07-27T07:49:46Z | 补齐论文第1至4章五幅流程图并完成96页全文排版QA | 按最终实验口径继续论文定稿与送审前核验 | 执行最终送审版全篇一致性检查并冻结交付PDF |
 | `skills.mcp` | 2026-07-18T16:41:09Z | 完成 PersonalOS 仓库迁移对齐：GitHub 已将项目从 QcRoaming/PersonalOS-v1 重命名为 QcRoaming/PersonalOS，origin、ROUTES、README、START_HERE、AGENTS 与便携 Skill 均已更新到新权威地址。 | 在真实文本窗口和语音窗口验证导入触发、会话选择、触发点截断与覆盖级别。 | 重启 Codex CLI 或 VS Code Codex 扩展，并在真实文本/语音窗口、第二账号和第二设备完成端到端验收。 |
 | `thesis.writing` | 2026-07-16T03:29:04Z | 第三章已依据真实实验重写完成，R 图形流水线、29 项测试和整篇论文编译均通过。 | 按最终证据目录重写第四至第六章，并统一摘要、绪论和结论边界。 | 先重写第四章搜索空间、BaCO 与 Transform Dialect 链路；外部板端和跨主机结果返回后再补相应结论。 |
 | `infra.tooling` | 2026-07-10 | 需要把 Transform Dialect artifact、Qwen/vLLM 环境和 Skill/MCP 环境分别固化，避免继续在不明确的 base/conda/pip 状态上叠加依赖。 | 重新确认当前 Docker 容器、镜像和实验 artifact 的有效状态。 | 为 Transform Dialect 实验建立一条可重复执行的环境检查命令和版本清单。 |

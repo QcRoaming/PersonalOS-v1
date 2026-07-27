@@ -4,11 +4,11 @@ title: Kernel-aware GEMM Expert Schedule Space
 role: main
 priority: P0
 status: active
-version: 33
-updated_at: 2026-07-24
+version: 34
+updated_at: 2026-07-27
 keywords: GEMM|BLIS|OpenBLAS|libxsmm|MLIR|Transform Dialect|BaCO|microkernel|packing|tiling|vectorization|search space|compatibility checker
 imports: infra.tooling#Current Blockers|thesis.writing#Current Chapter
-last_activity_at: 2026-07-24T06:04:50Z
+last_activity_at: 2026-07-27T07:49:46Z
 ---
 
 # Goal
@@ -25,7 +25,7 @@ last_activity_at: 2026-07-24T06:04:50Z
 
 # Current Checkpoint
 
-完成规范化 C 候选池离线 BaCO replay并冻结最终 E2 性能口径
+补齐论文第1至4章五幅流程图并完成96页全文排版QA
 
 # Verified Milestones
 
@@ -79,11 +79,11 @@ last_activity_at: 2026-07-24T06:04:50Z
 
 # Doing
 
-- 按最终规范化 D90/time-to-90、部分复用和 LCB95 break-even 口径整理第四至六章
+- 按最终实验口径继续论文定稿与送审前核验
 
 # Next
 
-1. 在论文正文中并列报告最终 D90=0.1875、time-to-90=8.0 与规范化前消融 0.1964/11.5
+1. 执行最终送审版全篇一致性检查并冻结交付PDF
 
 # Current Blockers
 
@@ -138,6 +138,8 @@ last_activity_at: 2026-07-24T06:04:50Z
 
 # Recent Evidence
 
+- 2026-07-27T07:49:46Z — 五处题注占位已替换；第1至4章共11幅图由Python统一生成，manifest PASS；全文96页且无LaTeX错误、未定义引用或overfull box
+- 2026-07-27T07:49:46Z — artifact: /buddy-mlir/jlq/thesis/nwputhesis/build/graduate.pdf
 - 2026-07-24T06:04:50Z — 冻结 replay：8 workload x 5 seed x budget 25，共 40 run/1000 callback；最终 D90=0.1875、time-to-90=8.0、reached=0.925；旧 0.1964/11.5 保留为规范化前消融；无编译、无硬件重测
 - 2026-07-24T06:04:50Z — artifact: /buddy-mlir/jlq/thesis/experiments/chapter6_contract_space_validation/reports/contract_space_validation_results.md
 - 2026-07-24T03:03:24Z — E2 C mean 208.7 to 104.4 and IR duplicates 0.500 to 0; E3 schema 31 intersection/34 union; E4 Cc=58.239 ms, sum Cs=531895.625 ms, LCB95 break-even=741587 cycles
@@ -146,5 +148,3 @@ last_activity_at: 2026-07-24T06:04:50Z
 - 2026-07-24T01:48:46Z — artifact: /buddy-mlir/jlq@0a373a0c8:thesis/experiments/chapter6_contract_space_validation/reports/contract_space_validation_results.md
 - 2026-07-24T01:46:35Z — E1 independent oracle PASS：3 packages、30 cases、24/24 dangerous mutations handled，false accept/false reject 为 0
 - 2026-07-24T01:46:35Z — E2 修复前口径完成 93,600 次静态分类；G0/G1/C 平均候选 2600.0/1056.2/208.7，后由 version 32 checkpoint 的 vectorize 规范化结果取代
-- 2026-07-24T01:46:35Z — E3 复用审计：共享 31 个 schema 叶字段、核心 package-ID 特判 0；BLIS f64 复用核心生成器，OpenBLAS RVV 仍为 package-local 生成路径
-- 2026-07-24T01:46:35Z — E4 搜索经济性：i7 仅有后验描述性正 break-even；i9/K230 exact shapes 相对完整库无有限正成本 break-even
